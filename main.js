@@ -1,5 +1,9 @@
-//지도를 삽입할 HTML 요소 또는 HTML 요소의 id를 지정합니다.
-let mapDiv = document.getElementById('map'); // 'map'으로 선언해도 동일
+let map = new naver.maps.Map('map', {
+  center: new naver.maps.LatLng(37.3595704, 127.105399),
+  zoom: 17
+})
 
-//옵션 없이 지도 객체를 생성하면 서울 시청을 중심으로 하는 16 레벨의 지도가 생성됩니다.
-let map = new naver.maps.Map(mapDiv);
+let marker = new naver.maps.Marker({
+  position: new naver.maps.LatLng(37.3595704, 127.105399),
+  map: map
+})
